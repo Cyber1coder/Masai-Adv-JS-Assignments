@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "h1">Welcome to Javascript!!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veritatis recusandae eos quaerat.</p>
+    <div class = "container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum eaque ratione ipsa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum!</p>
+
+    </div>
+
+    <script>
+        
+        let abc = document.getElementById("h1")
+        abc.textContent="Welcome to DOM World!!"
+
+        //change text color to blue
+        let xyz = document.getElementsByTagName("p")
+        for(let i =0;i<xyz.length;i++)
+    {
+        xyz[i].style.color = "blue";
+    }
+
+    let box = document.querySelector(".container");
+    box.style.backgroundColor = "yellow";
+    </script>
+</body>
+</html>
