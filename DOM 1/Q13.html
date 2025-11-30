@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color & Text Changer</title>
+</head>
+<body>
+
+    <input id="colorInput" type="text" placeholder="Enter color name"> <br><br>
+    <input id="textInput" type="text" placeholder="Enter text"><br><br>
+    <button id="bgBtn">Change Background</button>
+    <button id="textBtn">Update Text</button>
+
+    <div id="box" style="width:300px; height:120px; margin-top:20px; padding:10px; border:1px solid black;">
+        This is my box text
+    </div>
+    <script>
+        let colorInput = document.querySelector("#colorInput");
+        let textInput = document.querySelector("#textInput");
+        let box = document.querySelector("#box");
+
+        document.querySelector("#bgBtn").addEventListener("click", function () {
+            let c = colorInput.value;
+            box.style.backgroundColor = c;
+            if (box.style.backgroundColor === "") {
+                alert("Invalid color name!");
+            }
+        });
+        document.querySelector("#textBtn").addEventListener("click", function () {
+            let t = textInput.value;
+            if (t==="") {
+                alert("Please enter some text!");
+            } else {
+                box.textContent = t;
+            }
+        });
+    </script>
+
+</body>
+</html>
